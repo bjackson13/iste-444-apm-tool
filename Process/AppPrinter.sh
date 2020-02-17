@@ -3,4 +3,4 @@
 # Josh Schrader
 # Abbey Sands
 # Brennan Jackson
-# APMStarter - Starts the app monitoring tool
+# AppPrinter - prints results sent by the app monitor to a csv file

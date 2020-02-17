@@ -3,4 +3,4 @@
 # Josh Schrader
 # Abbey Sands
 # Brennan Jackson
-# APMStarter - Starts the app monitoring tool
+# SystemMonitor - monitors system resource usage

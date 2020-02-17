@@ -3,4 +3,4 @@
 # Josh Schrader
 # Abbey Sands
 # Brennan Jackson
-# APMStarter - Starts the app monitoring tool
+# AppMonitor - monitors the resources used by the 6 C scripts
