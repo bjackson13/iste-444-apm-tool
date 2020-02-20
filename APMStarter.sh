@@ -5,7 +5,7 @@
 # Brennan Jackson
 # APMStarter - Starts the app monitoring tool
 
-# trap for exit - call cleanup
+# trap for exit - call cleanup   
 trap 'cleanup' EXIT  
 
 # Start the 6 C scripts
