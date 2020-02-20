@@ -6,7 +6,7 @@
 # APMStarter - Starts the app monitoring tool
 
 # trap for exit - call cleanup
-trap 'cleanup' EXIT
+trap 'cleanup' EXIT  
 
 # Start the 6 C scripts
 start_c_scripts () {}
