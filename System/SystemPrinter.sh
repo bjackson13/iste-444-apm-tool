@@ -29,7 +29,7 @@ while true
 do
 	# run the system monitor commands in the background to avoid delays caused by the 1 second sample in ifstat
 	# errors are ignored
-	./SystemMonitor.sh $ip > temp.txt 2> /dev/null &
+	./System/SystemMonitor.sh $ip > temp.txt 2> /dev/null &
 	
 	# sleep for 5 seconds
 	sleep 5
