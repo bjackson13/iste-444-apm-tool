@@ -9,7 +9,7 @@ while true
 do
 	for i in {1..6}
 	do
-	./AppMonitor.sh $i > p_temp.txt 2> /dev/null
+	./Process/AppMonitor.sh $i > p_temp.txt 2> /dev/null
 
 	echo "$SECONDS,$(<p_temp.txt)" >> ./APM${i}_metrics.csv
 
