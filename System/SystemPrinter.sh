@@ -16,11 +16,6 @@ trap remove_temp EXIT
 # ip passed in as first arg
 ip=$1
 
-if [ -e system_metrics.csv ]
-then
-	rm -f system_metrics.csv
-fi
-
 # make the log file
 touch system_metrics.csv
 

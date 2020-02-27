@@ -8,6 +8,9 @@
 # Get IP address from args
 ip=$1
 
+# remove all old csv files
+rm -f *.csv 2> /dev/null
+
 # Start the 6 C scripts
 start_c_scripts () {
 	for i in {1..6}

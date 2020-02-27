@@ -5,15 +5,19 @@
 # Brennan Jackson
 # AppPrinter - prints results sent by the app monitor to a csv file
 
-while true
+remove_temp () {
+        rm -f p_temp.txt
+}
+
+trap remove_temp EXIT
+
+
+while sleep 5
 do
 	for i in {1..6}
 	do
 	./Process/AppMonitor.sh $i > p_temp.txt 2> /dev/null
 
-	echo "$SECONDS,$(<p_temp.txt)" >> ./APM${i}_metrics.csv
-
-	#delay script 5 seconds
+	echo "$SECONDS,$(<p_temp.txt)" >> ./APM"$i"_metrics.csv
 	done
-	sleep 5
 done
