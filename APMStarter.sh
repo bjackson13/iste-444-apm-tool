@@ -19,17 +19,6 @@ start_c_scripts () {
 	done
 }
 
-start_system_scripts () {
-	# start all the system scripts
-	#./Scripts/bandwidth_hog_burst.c &
-	#./Scripts/cpu_hog.c &
-	#./Scripts/bandwidth_hog.c &
-	#./Scripts/disk_hog.c &
-	#./Scripts/memory_hog.c &
-	#./Scripts/memory_hog_leak.c &
-	echo
-}
-
 # start the monitor scripts
 start_printer_scripts () {
 	# start the process monitor
@@ -61,20 +50,6 @@ cleanup () {
 		kill $pid 2> /dev/null
 	done
 
-	# kill all of the system scripts
-	#bwhogburstpid=$( ps -e | egrep "bandwidth_hog_burst" | awk '{print $1}' )
-	#kill $bwhogburstpid 2> /dev/null
-	#bwhog=$( ps -e | egrep "cpu_hog" | awk '{print $1}' )
-	#kill $bwhog 2> /dev/null
-	#cpuhog=$( ps -e | egrep "bandwidth_hog" | awk '{print $1}' )
-	#kill $cpuhog 2> /dev/null
-	#diskhog=$( ps -e | egrep "disk_hog" | awk '{print $1}' )
-	#kill $diskhog 2> /dev/null
-	#memhog=$( ps -e | egrep "memory_hog" | awk '{print $1}' )
-	#kill $memhog 2> /dev/null
-	#memleak=$( ps -e | egrep "memory_hog_leak" | awk '{print $1}' )
-	#kill $memleak 2> /dev/null
-
 	echo Test Scripts killed.
 }
 
@@ -83,7 +58,6 @@ trap 'cleanup' EXIT
 
 # call our functions to start the APM tool
 start_c_scripts
-start_system_scripts
 start_printer_scripts
 wait
 echo Script and monitoring stopped...
