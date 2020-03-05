@@ -35,19 +35,19 @@ cleanup () {
 	
 	# kill the system monitor/printer
 	systemid=$( ps -e | egrep "SystemPrinter" | awk '{print $1}' )
-	kill -5 $systemid 1> /dev/null 2> /dev/null
+	kill -15 $systemid 1> /dev/null 2> /dev/null
 	echo System monitoring killed.	
 
 	# kill the process monitor/printer
 	processid=$( ps -e | egrep "AppPrinter" | awk '{print $1}' )
-	kill -5 -p $processid 1> /dev/null 2> /dev/null
+	kill -15 -p $processid 1> /dev/null 2> /dev/null
 	echo App monitoring killed.	
 
 	# kill the APM c scripts
 	for i in {1..6}
 	do
 		pid=$( ps -e | egrep "APM$i" | awk '{print $1}' )
-		kill $pid 2> /dev/null
+		kill -15 $pid 2> /dev/null
 	done
 
 	echo Test Scripts killed.
